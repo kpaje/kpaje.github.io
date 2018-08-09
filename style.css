@@ -117,13 +117,13 @@ section:hover {
 }
 @-webkit-keyframes rise {
     from {
-        bottom: -300px;}
+        bottom: -400px;}
     to {
         bottom: 0px;} 
 }
 @keyframes rise {
     from {
-        bottom: -300px;}
+        bottom: -400px;}
     to {
         bottom: 0px;}
 }
