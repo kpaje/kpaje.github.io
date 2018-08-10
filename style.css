@@ -16,6 +16,24 @@ h1, p {
     background: #ebebeb;
 }
 
+ul {
+    color: blue;
+    list-style-type: none;
+    margin-left: 27%;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 10px 0px;
+    padding: 20px 40px;
+    background-color: aqua;
+}
+
+
 /* 
 ==========================
         BOXES
@@ -28,14 +46,14 @@ h1, p {
     margin: 3% auto 10px auto;
 }
 
-.lead {
+.content {
     height: 300px;
     width: 960px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.rect {
+.banner {
     background: #ebebeb;
     height: 100px;
     padding-top: 10px;
@@ -44,8 +62,9 @@ h1, p {
 
 .sqr {
     background: #ebebeb;
-    width: 475px;
+    width: 469px;
     height: 300px;
+    border: 3px transparent ridge;
 }
 
 .ch-sqr {
@@ -75,18 +94,23 @@ h1, p {
 
 /* 
 ==========================
-        PSUEDO
+        HOVER
 ==========================
 */
 
-section:hover {
+.grow:hover {
     z-index: 1;
     position: relative;
     transform: scale(1.1);
     transition: 0.7s;
     transition-duration: 0.7s;
-    border-style: dotted;
-    border-color: black;
+    background-color: dimgrey;
+    color: white;
+    border-color: lightgrey;
+}
+
+li:hover {
+    background-color: aquamarine;
 }
 
 
@@ -123,8 +147,10 @@ section:hover {
 }
 @keyframes rise {
     from {
+        opacity: 0;
         bottom: -400px;}
     to {
+        opacity: 1;
         bottom: 0px;}
 }
 
@@ -147,11 +173,9 @@ section:hover {
 }
 @keyframes scale-x {
     from {
-        height: 0px;
         opacity: 0;
-        transform: scaleY(0);}
+        transform: scaleX(0);}
     to {
-        transform: rotate(0.5turn);
         opacity: 1;
-        transform: scaleY(1);}
+        transform: scaleX(1);}
 }
