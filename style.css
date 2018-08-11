@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-family: 'Abril Fatface', cursive;
     color: #777;
     background: #777;
     font-size: 18px;
@@ -11,28 +11,15 @@ aside, footer {
     cursor: -webkit-grab;
 }
 
-h1, p {
+h1, h2, h3, p {
     color: #777;
     background: #ebebeb;
+    display: inline;
 }
 
-ul {
-    color: blue;
-    list-style-type: none;
-    margin-left: 27%;
-    padding: 0;
-    overflow: hidden;
+h1, h2, h3 {
+    font-weight: 900;
 }
-
-li {
-    text-align: center;
-    display: block;
-    float: left;
-    margin: 10px 0px;
-    padding: 20px 40px;
-    background-color: aqua;
-}
-
 
 /* 
 ==========================
@@ -41,7 +28,6 @@ li {
 */
 
 .container {
-    height: 300px;
     width: 960px;
     margin: 3% auto 10px auto;
 }
@@ -49,8 +35,7 @@ li {
 .content {
     height: 300px;
     width: 960px;
-    display: block;
-    margin-bottom: 15px;
+    margin-bottom: 55px;
 }
 
 .banner {
@@ -60,18 +45,27 @@ li {
     margin-bottom: 10px;
 }
 
-.sqr {
+.l-sqr {
     background: #ebebeb;
     width: 469px;
     height: 300px;
     border: 3px transparent ridge;
+    padding-top: 40px;
 }
 
-.ch-sqr {
+.m-sqr {
     color: #ebebeb;
     background: #777;
-    padding: 10%;
-    margin: 20% 5%;
+    padding: 20px;
+    margin: 20px 10px;
+}
+
+.s-sqr {
+    color: #777;
+    background-color: #ebebeb;
+    width: 380px;
+    padding: 15px;
+    margin: 10px 0px;
 }
 
 
@@ -94,31 +88,22 @@ li {
 
 /* 
 ==========================
-        HOVER
+        ANIMATIONS
 ==========================
 */
 
+.grow {
+    transition-duration: 0.5s;
+}
 .grow:hover {
     z-index: 1;
     position: relative;
     transform: scale(1.1);
-    transition: 0.7s;
-    transition-duration: 0.7s;
     background-color: dimgrey;
     color: white;
     border-color: lightgrey;
+    box-shadow: 0 5px 3px 3px rgb(0, 0, 0, 0.3);
 }
-
-li:hover {
-    background-color: aquamarine;
-}
-
-
-/* 
-==========================
-        ANIMATIONS
-==========================
-*/
 
 .fall {
     overflow: hidden;
@@ -178,4 +163,20 @@ li:hover {
     to {
         opacity: 1;
         transform: scaleX(1);}
+}
+
+.jump:hover {
+    animation: jump 0.5s;
+    animation-fill-mode:none;
+}
+@keyframes jump {
+    50% {
+      transform: scale(1.1);}
+}
+
+.round {
+    transition-duration: 0.3s;
+}
+.round:hover {
+    border-radius: 40px;
 }
